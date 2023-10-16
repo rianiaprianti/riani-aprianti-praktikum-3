@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pesanan barang</title>
+    <style>
+        .container {
+      display: flex;
+      align-items: center; /* Untuk vertikal tengahkan elemen */
+    }
+
+    .image {
+      flex: 1; /* Membuat gambar mengambil setengah lebar container */
+      padding: 10px;
+      
+    }
+
+    .content {
+      flex: 10; /* Membuat konten mengambil setengah lebar container */
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .image-box {
+      width: 200px; /* Lebar kotak gambar */
+      height: 200px; /* Tinggi kotak gambar */
+      background-image: url("image/1.jpg");
+      background-size: cover;
+      background-position: top ; /* Mengatur gambar di atas elemen */
+    }   
+    ul {
+    list-style: none;
+  }
+
+  .col-md {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+  }
+
+  fieldset {
+    width: 500px;
+    padding: 10px;
+    border: 2px solid #000000;
+    text-align: center; /* Untuk menengahkan teks dalam fieldset */
+  }
+
+        </style>
+</head>
+<body>
+    <div class="col-md">
+      <fieldset>
+        <div class="form-group">
+        <table style="width:100%">
+          <tr>
+          <th>Home  |</th>
+          <th>Register |</th>
+          <th>Policy  |</th>
+          <th>About  |</th>
+        </tr>
+        </table>
+        </div>
+      </fieldset>
+      </div>
+            <div class="container">
+                <div class="image">
+                    <div class="image-box"></div>
+                  <br><br>
+                </div>
+                <div class="content">
+                <form>
+                    <p>Title Here: MackBook Air $800 </p>
+                    <p>Desckripsion: Year: 2009  </p>   
+                    <ul>       
+                        <li>Model: </li>
+                        <li>Condition: Mint</li>
+                    </ul>
+                        <p>Total Amount: $800</p>
+                        <p>Pay to: 123-456-789-0</p>
+                    <label for="pt">Payment Type:</label>
+                    <select name="pt" id="pt">
+                    <option value="hsbc">Visa Debit</option>
+                    <option value="bni">BNI</option>
+                    <option value="bca">BCA</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="AH">Account Holder:</label>
+                    <input type="text" id="AH" name="AH" placeholder="Name Here">
+                    <br>
+                    <br>
+                    <label for="an">Account No:</label>
+                    <input type="number" id="an" name="an" placeholder="123-456-789-0">
+                    <br>
+                    <input type="checkbox" id="stmp" name="stmp" value="stmp">
+                    <label for="stmp" style="color: rgb(0, 255, 26);">Send to mobile phone</label>
+                    <br>
+                    <input type="checkbox" id="emcot" name="emcot" value="emcot">
+                    <label for="emcot" style="color: rgba(0, 255, 26, 0.778);">Email me copy of transaction</label>
+                    <br>
+                    <br>
+                    <label for="smp">Send to Mobile Phone:</label>
+                    <input type="number" id="smp" name="smp" placeholder="1234567890, 1234567891">
+                    <br>
+                    <br>
+                    <label for="ste">Send to Email:</label>
+                    <input type="email" id="ste" name="ste" placeholder="mfmm2g13@soton.acuk, fys_06@yaho.com">
+                    <br>
+                    <br>
+                    <input type="submit" value="Pay Using QuidLink" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer;">
+                </form>
+                </div>
+                </div>
+            
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form pesanan</title>
+    <style>
+        .container {
+      display: flex;
+      align-items: center; /* Untuk vertikal tengahkan elemen */
+    }
+
+    .image {
+      flex: 1; /* Membuat gambar mengambil setengah lebar container */
+      padding: 10px;
+      
+    }
+
+    .content {
+      flex: 10; /* Membuat konten mengambil setengah lebar container */
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .image-box {
+      width: 200px; /* Lebar kotak gambar */
+      height: 200px; /* Tinggi kotak gambar */
+      background-image: url("image/1.jpg");
+      background-size: cover;
+      background-position: top ; /* Mengatur gambar di atas elemen */
+    }   
+
+    .col-md {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+  }
+
+  fieldset {
+    width: 1000px;
+    padding: 10px;
+    border: 2px solid #000000;
+    text-align: center; /* Untuk menengahkan teks dalam fieldset */
+  }
+
+        </style>
+</head>
+<body>
+    <div class="col-md">
+      <fieldset>
+        <div class="form-group">
+        <table style="width:100%">
+          <tr>
+          <th>Home  |</th>
+          <th>Generate Link |</th>
+          <th>Transaction History |</th>
+          <th>Policy  |</th>
+          <th>Logout  |</th>
+        </tr>
+        </table>
+        </div>
+      </fieldset>
+      </div>
+            <div class="container">
+                <div class="image">
+                    <div class="image-box"></div>
+                  <br><br>
+                  <form action="pesanan_barang.html" method="post" enctype="multipart/form-data">
+                    <input type="file" name="foto">
+                  </form>
+                </div>
+                <div class="content">
+                <form>
+                    <label for="title_here">Title Here:</label>
+                    <input type="text" id="title_here" name="title_here">
+                    <br>
+                    <br>
+                    <label for="deskripsi">Desckripsion:</label>
+                    <textarea id="deskripsi" name="deskripsi" rows="4" cols="50"></textarea>
+                    <br>
+                    <br>
+                   <label for="number">Account Number:</label>
+                    <input type="number" id="number" name="number">
+                    <br>
+                    <br>
+                    <label for="bank">Bank:</label>
+                    <select name="bank" id="bank">
+                    <option value="hsbc">HSBC</option>
+                    <option value="bni">BNI</option>
+                    <option value="bca">BCA</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="AH">Account Holder:</label>
+                    <input type="text" id="AH" name="AH">
+                    <br>
+                    <br>
+                    <label for="TS">Transaction:</label>
+                    <input type="number" id="TS" name="TS">
+                    <h6>*if the transaction is for 3 person, choose 3 from the drop-down list</h6>
+                    <input type="checkbox" id="stmp" name="stmp" value="stmp">
+                    <label for="stmp" style="color: blue;">Send to mobile phone</label>
+                    <br>
+                    <input type="checkbox" id="ste" name="ste" value="ste">
+                    <label for="ste" style="color: blue;">Send to email</label>
+                    <br>
+                    <br>
+                    <label for="smp">Send to Mobile Phone:</label>
+                    <input type="number" id="smp" name="smp">
+                    <br>
+                    <br>
+                    <label for="se">Send to Email:</label>
+                    <input type="email" id="se" name="se">
+                    <br>
+                    <br>
+                    <input type="submit" value="Generate Nabr Link" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer;">
+                </form>
+                </div>
+                </div>
+</body>
+</html>
